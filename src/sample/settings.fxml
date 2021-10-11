@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="settingsVbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.261" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SettingsController">
+   <children>
+      <VBox spacing="10.0">
+         <children>
+            <CheckBox fx:id="copyDetectionCheck" mnemonicParsing="false" selected="true" text="Detect copy and put clipboard contents into prompt" />
+            <CheckBox fx:id="autoSearchCheck" mnemonicParsing="false" selected="true" text="Automatically do a search when that happens">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </CheckBox>
+         </children>
+      </VBox>
+      <CheckBox fx:id="pasteCheck" mnemonicParsing="false" selected="true" text="Automatically search when prompt is pasted in" />
+      <CheckBox fx:id="clearCheck" layoutX="20.0" layoutY="76.0" mnemonicParsing="false" text="Clear prompt after doing a search" />
+      <CheckBox fx:id="sequentialCheck" layoutX="20.0" layoutY="76.0" mnemonicParsing="false" text="If Quizlet starts giving you HTTP 429 errors, this option will slow down requests which might help" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

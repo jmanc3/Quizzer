@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/8.0.261" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+   <children>
+      <HBox fx:id="textfieldHbox" styleClass="titleback">
+         <children>
+            <HBox fx:id="textFieldSectionHBox" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#toggleSettings" prefHeight="36.0" prefWidth="89.0" styleClass="clean-button" text="Settings" />
+                  <TextField fx:id="textField" onAction="#downloadAndSearchSets" promptText="What's your question? (Ctrl+L)" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="searchButton" mnemonicParsing="false" onAction="#downloadAndSearchSets" prefHeight="36.0" prefWidth="89.0" styleClass="clean-button" text="Search" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <StackPane alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS">
+         <children>
+            <StackPane fx:id="stackpane">
+               <children>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" focusTraversable="false" styleClass="edge-to-edge">
+                     <content>
+                        <StackPane>
+                           <children>
+                              <VBox fx:id="vbox" focusTraversable="true" maxWidth="1200.0" spacing="10.0" StackPane.alignment="CENTER">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <Label fx:id="searchLabel" text="Make sure you're logged in to Quizlet on your browser or you might not get full results." />
+                           </children>
+                        </StackPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </StackPane>
+            <VBox>
+               <children>
+                  <Region maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mouseTransparent="true" prefHeight="100.0" prefWidth="100.0" />
+                  <TitledPane animated="false" text="Search Information">
+                     <content>
+                        <ScrollPane fitToWidth="true">
+                           <content>
+                              <VBox spacing="14.0">
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <Label text="Google Search" />
+                                       </children>
+                                    </HBox>
+                                    <AnchorPane maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: #ddffdd; -fx-background-radius: 8;">
+                                       <children>
+                                          <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="HTTP Error Code 401" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <HBox>
+                                       <children>
+                                          <Label text="Cached Set(s)" />
+                                          <Pane HBox.hgrow="ALWAYS" />
+                                          <Label text="Elapsed Time 58ms, Checked 9/68, Matches 2/68" />
+                                       </children>
+                                    </HBox>
+                                    <ScrollPane pannable="true" styleClass="edge-to-edge" vbarPolicy="NEVER">
+                                       <content>
+                                          <HBox spacing="14.0" styleClass="edge-to-edge">
+                                             <children>
+                                                <AnchorPane maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: #ffdddd; -fx-background-radius: 8;">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Failed" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: #ddffdd; -fx-background-radius: 8;">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Matched" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: #ddddff; -fx-background-radius: 8;">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Checking..." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Waiting..." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="577.0" layoutY="10.0" maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Waiting..." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="766.0" layoutY="10.0" maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Waiting..." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="955.0" layoutY="10.0" maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Waiting..." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="1144.0" layoutY="10.0" maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Waiting..." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </HBox>
+                                       </content>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </ScrollPane>
+                                    <HBox>
+                                       <children>
+                                          <Label text="Top Sets" />
+                                          <Pane HBox.hgrow="ALWAYS" />
+                                          <Label text="Elapsed Time 58ms, Checked 9/68, Matches 2/68" />
+                                       </children>
+                                    </HBox>
+                                    <FlowPane hgap="14.0" vgap="14.0">
+                                       <children>
+                                          <AnchorPane maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: #ddffdd; -fx-background-radius: 8;">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Matched" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: #ffdddd; -fx-background-radius: 8;">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Failed" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: #ddffdd; -fx-background-radius: 8;">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Matched" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: #ddffdd; -fx-background-radius: 8;">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Matched" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: #ddddff; -fx-background-radius: 8;">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Checking..." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Waiting..." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Waiting..." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Waiting..." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Waiting..." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane maxHeight="100.0" maxWidth="175.0" minHeight="100.0" minWidth="175.0" prefHeight="100.0" prefWidth="175.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="23.0" layoutY="45.0" text="Waiting..." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Set 13828431" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </FlowPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </content>
+                  </TitledPane>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</VBox>
