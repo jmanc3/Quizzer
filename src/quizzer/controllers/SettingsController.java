@@ -1,4 +1,4 @@
-package sample;
+package quizzer.controllers;
 
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
@@ -8,7 +8,6 @@ import net.harawata.appdirs.AppDirsFactory;
 
 import java.io.*;
 import java.net.URL;
-import java.nio.Buffer;
 import java.util.ResourceBundle;
 
 public class SettingsController implements Initializable {

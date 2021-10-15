@@ -1,4 +1,4 @@
-package sample;
+package quizzer.controllers;
 
 import info.debatty.java.stringsimilarity.NormalizedLevenshtein;
 import javafx.application.Platform;

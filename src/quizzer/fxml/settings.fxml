@@ -4,7 +4,7 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:id="settingsVbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.261" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SettingsController">
+<VBox fx:id="settingsVbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.261" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizzer.controllers.SettingsController">
    <children>
       <VBox spacing="10.0">
          <children>

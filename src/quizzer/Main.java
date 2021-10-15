@@ -1,4 +1,4 @@
-package sample;
+package quizzer;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +8,8 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCodeCombination;
 import javafx.scene.input.KeyCombination;
 import javafx.stage.Stage;
+import quizzer.controllers.MainController;
+import quizzer.controllers.SettingsController;
 
 public class Main extends Application {
 
@@ -16,11 +18,11 @@ public class Main extends Application {
         primaryStage.setMinWidth(650);
         primaryStage.setMinHeight(400);
         FXMLLoader settingsLoader = new FXMLLoader();
-        Parent settingsRoot = settingsLoader.load(getClass().getResource("settings.fxml").openStream());
+        Parent settingsRoot = settingsLoader.load(getClass().getResource("fxml/settings.fxml").openStream());
         SettingsController settingsController = (SettingsController) settingsLoader.getController();
 
         FXMLLoader mainLoader = new FXMLLoader();
-        Parent mainRoot = mainLoader.load(getClass().getResource("main.fxml").openStream());
+        Parent mainRoot = mainLoader.load(getClass().getResource("fxml/main.fxml").openStream());
         MainController mainController = mainLoader.getController();
 
         mainController.stackpane.getChildren().add(settingsRoot);
@@ -30,7 +32,7 @@ public class Main extends Application {
 
         primaryStage.setTitle("Quizlet");
         Scene scene = new Scene(mainRoot);
-        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("assets/style.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
 
